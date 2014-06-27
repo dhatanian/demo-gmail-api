@@ -1,0 +1,38 @@
+{
+    "name": "Revevol Mail to PDF",
+    "version": "0.3",
+    "manifest_version": 2,
+    "minimum_chrome_version": "29",
+    "description": "Demonstration of the GMail API to export mails to PDF and insert them into drafts",
+    "icons": {
+        "16": "/images/Pdf_16x16_Crystal_SVG.png",
+        "48": "/images/pdf-icon-48x48.png",
+        "128": "/images/pdf-icon-128x128.png"
+    },
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjsBsgsXxYdbC8zCnxBP3GLa8wg0dMhsZFr6k/BO41gEdLjuXNQu7cJHCdvTLTJKsOkdoW9SbBIHI8kub75R43TtXCpVXkMR5vBKRTog9c2X0VeW169r70WY/UjhzsTzVTmlzhoV+T900NkPDvR2vQTpKKIDsU6s18METLuzJAVPe5z77Y8w+nYu1R6pJpCWteL6I4+taLIzjpE26PWpVbsDt3i6TWqQVQeukJ9w8y0bNLU7osz78ATyhRWMN4ThvzFhFP8fAw8dxeo+kRH2g94czT72QuHdzqvy1lvHlMlLud/5HyB3NmcA54Vn/8OC2vXPO/HmRhWbJLGecNgYdVwIDAQAB",
+    "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+    "browser_action": {
+        "default_icon": {
+            "19": "/images/Pdf_16x16_Crystal_SVG.png",
+            "38": "/images/pdf-icon-48x48.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "identity",
+        "https://*.google.com/*",
+        "https://ssl.gstatic.com/",
+        "https://www.googleapis.com/",
+        "https://accounts.google.com/"
+    ],
+    "oauth2": {
+        "client_id": "1010197796821-ip6li20qs028tv7llst0ofjc061hn74u.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/drive.file",
+            "https://www.googleapis.com/auth/gmail.readonly",
+            "https://www.googleapis.com/auth/gmail.compose"
+        ]
+    }
+}
+
