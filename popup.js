@@ -85,7 +85,6 @@ function createDraftWithAttachment(linkToPDF, callback) {
     oReq.onload = function (oEvent) {
         //Create the draft and call the callback
         var email = createDraftEmail(arrayBufferToBase64(oReq.response));
-        console.log(email);
         uploadDraft(email, function (data) {
             console.log(data);
             callback(data);
@@ -106,12 +105,10 @@ function createDraftWithAttachment(linkToPDF, callback) {
 function uploadDraft(email, callback) {
     var base64EncodedEmail = btoa(email);
     var payload = {
-        'userId': "me",
-        'draft': {
+       userId: "me",
             'message': {
                 'raw': base64EncodedEmail
             }
-        }
     };
     console.log(JSON.stringify(payload));
     var request = gapi.client.gmail.users.drafts.create(payload);
